@@ -2,22 +2,38 @@ version: 2
 
 jobs:
   build:
-    node:
-      version: 4.5.0
+    working_directory: ~/react-get-not-declared-props
+    docker:
+      - image: circleci/node:4
+    steps:
+      - checkout
+      - run:
+          name: Install packages
+          command: yarn install
+  test:
+    steps:
+      - run:
+          name: Test
+          command: yarn run test:coverage
+      - run:
+          name: Code Coverage
+          command: yarn run report-coverage
+
   lint:
     steps:
-      - run: yarn run lint
-  build:
-    steps:
-      - run: yarn run build
-  test:
-    steps:
-      - run: yarn run test:coverage
-      - run: yarn run report-coverage
+      - run:
+        name: Lint
+        command: yarn run test:coverage
+
 workflows:
   version: 2
-  build:
-    - build
+
   test:
-    - lint
-    - test
+    jobs:
+      - build
+      - lint:
+        requires:
+         - build
+      - test:
+        requires:
+          - build
