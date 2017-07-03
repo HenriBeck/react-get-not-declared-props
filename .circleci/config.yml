@@ -1,0 +1,23 @@
+version: 2
+
+jobs:
+  build:
+    node:
+      version: 4.5.0
+  lint:
+    steps:
+      - run: yarn run lint
+  build:
+    steps:
+      - run: yarn run build
+  test:
+    steps:
+      - run: yarn run test:coverage
+      - run: yarn run report-coverage
+workflows:
+  version: 2
+  build:
+    - build
+  test:
+    - lint
+    - test
