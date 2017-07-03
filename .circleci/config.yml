@@ -8,21 +8,21 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install packages
+          name: install packages
           command: yarn install
   test:
     steps:
       - run:
-          name: Test
+          name: test
           command: yarn run test:coverage
       - run:
-          name: Code Coverage
+          name: code coverage
           command: yarn run report-coverage
 
   lint:
     steps:
       - run:
-        name: Lint
+        name: lint
         command: yarn run test:coverage
 
 workflows:
