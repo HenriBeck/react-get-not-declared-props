@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install packages
+          name: Install packages
           command: yarn install
   test:
     steps:
@@ -23,7 +23,7 @@ jobs:
     steps:
       - run:
         name: lint
-        command: yarn run test:coverage
+        command: yarn run lint
 
 workflows:
   version: 2
@@ -34,6 +34,3 @@ workflows:
       - lint:
         requires:
          - build
-      - test:
-        requires:
-          - build
