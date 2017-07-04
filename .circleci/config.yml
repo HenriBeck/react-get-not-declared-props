@@ -22,5 +22,5 @@ jobs:
   lint:
     steps:
       - run:
-        name: lint
-        command: yarn run lint
+          name: lint
+          command: yarn run lint
