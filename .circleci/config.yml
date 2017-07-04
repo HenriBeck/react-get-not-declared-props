@@ -8,8 +8,14 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install packages
+          name: Install Packages
           command: yarn install
       - run:
-          name: lint
+          name: Lint Code
           command: yarn run lint
+      - run:
+          name: Run Tests & Check Coverage
+          command: yarn run test:coverage
+      - run:
+          name: Report Coverage
+          command: yarn run report-coverage
