@@ -10,17 +10,6 @@ jobs:
       - run:
           name: Install packages
           command: yarn install
-  test:
-    steps:
-      - run:
-          name: test
-          command: yarn run test:coverage
-      - run:
-          name: code coverage
-          command: yarn run report-coverage
-
-  lint:
-    steps:
       - run:
           name: lint
           command: yarn run lint
