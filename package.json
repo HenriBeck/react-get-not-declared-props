@@ -1,6 +1,6 @@
 {
   "name": "react-get-not-declared-props",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utility function to get all extra props that were passed to a component",
   "main": "lib/get-not-declared.js",
   "repository": "https://github.com/HenriBeck/react-get-not-declared-props.git",
