@@ -24,13 +24,3 @@ jobs:
       - run:
         name: lint
         command: yarn run lint
-
-workflows:
-  version: 2
-
-  test_and_build:
-    jobs:
-      - build
-      - lint:
-        requires:
-         - build
