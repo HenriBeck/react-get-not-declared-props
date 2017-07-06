@@ -7,7 +7,7 @@
   "author": "Henri Beck <henribeck.dev@gmail.com>",
   "license": "MIT",
   "files": [
-    "lib/get-not-declared-props.js"
+    "lib/*.js"
   ],
   "scripts": {
     "test": "NODE_ENV=\"test\" ava",

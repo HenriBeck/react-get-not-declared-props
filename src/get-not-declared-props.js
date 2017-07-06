@@ -19,5 +19,5 @@ export default function getNotDeclaredProps(props, instance, additionalProps = [
 }
 
 export function createGetNotDeclaredProps(...propNames) {
-  return (props, instance) => getNotDeclaredProps(props, instance, propNames);
+  return (props, instance, additionalProps) => getNotDeclaredProps(props, instance, propNames.concat(additionalProps));
 }
