@@ -1,0 +1,8 @@
+src/
+.circleci/
+.coverage/
+.nyc_output/
+.babelrc.js
+.eslintrc.js
+.flowconfig
+.gitignore

@@ -1,4 +1,5 @@
 [ignore]
+.*/lib/.*
 
 [include]
 
@@ -8,7 +9,6 @@
 all=error
 
 [options]
-all=false
 emoji=true
 experimental.const_params=true
 include_warnings=true
