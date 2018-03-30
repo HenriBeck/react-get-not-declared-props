@@ -1,1 +1,5 @@
-module.exports = { extends: '@tf2-pickup/eslint-config' };
+module.exports = {
+  extends: 'airbnb-base',
+
+  parser: 'babel-eslint',
+};

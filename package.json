@@ -1,52 +1,56 @@
 {
   "name": "react-get-not-declared-props",
   "version": "0.1.2",
-  "description": "Utility function to get all extra props that were passed to a component",
-  "main": "lib/get-not-declared-props.js",
+  "description": "Utility function to get all additional props that were passed to a component",
+  "main": "lib/index.js",
   "repository": "https://github.com/HenriBeck/react-get-not-declared-props.git",
   "author": "Henri Beck <henribeck.dev@gmail.com>",
   "license": "MIT",
   "files": [
-    "lib/*.js"
+    "lib/"
   ],
   "scripts": {
-    "test": "NODE_ENV=\"test\" ava",
-    "test:watch": "yarn run test -- --watch",
+    "test": "ava --no-cache",
     "test:coverage": "nyc yarn run test",
-    "build": "babel src --out-dir lib",
+    "prebuild": "rimraf lib/",
+    "build": "babel src -d lib --ignore spec.js && flow-copy-source src lib -i *.spec.js",
     "generate-report:html": "nyc report --reporter=html",
     "generate-report:lcov": "nyc report --reporter=text-lcov",
     "report-coverage": "yarn run generate-report:lcov | coveralls",
     "prepublish": "yarn run build",
-    "lint": "eslint src/index.js",
-    "precommit": "yarn run lint"
+    "lint": "eslint src/",
+    "flow": "flow check ./src/",
+    "precommit": "yarn run lint && yarn run flow"
   },
   "devDependencies": {
-    "@tf2-pickup/eslint-config": "2.7.7",
-    "ava": "0.20.0",
-    "babel-cli": "6.24.1",
-    "babel-env": "2.4.1",
-    "babel-register": "6.24.1",
-    "coveralls": "2.13.1",
-    "eslint": "4.1.1",
-    "husky": "0.14.2",
-    "nyc": "11.0.3"
+    "@babel/cli": "7.0.0-beta.42",
+    "@babel/core": "7.0.0-beta.42",
+    "@babel/preset-env": "7.0.0-beta.42",
+    "@babel/preset-flow": "7.0.0-beta.42",
+    "@babel/register": "7.0.0-beta.42",
+    "ava": "1.0.0-beta.3",
+    "babel-eslint": "8.2.2",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.9.0",
+    "flow-bin": "0.69.0",
+    "flow-copy-source": "1.3.0",
+    "husky": "0.14.3",
+    "nyc": "11.6.0",
+    "rimraf": "2.6.2"
   },
   "ava": {
     "files": [
-      "src/*.spec.js"
+      "src/index.spec.js"
     ],
     "require": [
-      "babel-register"
-    ],
-    "babel": {
-      "babelrc": true
-    }
+      "@babel/register"
+    ]
   },
   "nyc": {
     "check-coverage": true,
     "exclude": [
-      "src/*.spec.js"
+      "src/index.spec.js"
     ],
     "lines": 100,
     "statements": 100,

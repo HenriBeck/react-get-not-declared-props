@@ -1,0 +1,16 @@
+[ignore]
+.*/lib/.*
+
+[include]
+
+[libs]
+
+[lints]
+all=error
+
+[options]
+emoji=true
+experimental.const_params=true
+include_warnings=true
+
+[strict]
