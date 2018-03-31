@@ -12,12 +12,14 @@ A dependencies free utility package for getting all extra passed props to an com
 
 ```js
 import getNotDeclaredProps from 'react';
+
+const additionalProps = getNotDeclaredProps(props, component, additionalProps);
 ```
 
 This function takes three arguments:
 - props: The props object.
 - component: The component where the propTypes are defined on.
-- additionalProps: An array of string which should be omitted aswell from the return object.
+- additionalProps: An array of strings which should be omitted aswell from the return object. This argument is optional.
 
 ### Example
 
