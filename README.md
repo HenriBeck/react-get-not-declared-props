@@ -21,6 +21,14 @@ This function takes three arguments:
 - component: The component where the propTypes are defined on.
 - additionalProps: An array of strings which should be omitted aswell from the return object. This argument is optional.
 
+### Tradeoffs
+
+##### The props:
+ - Improves the Developer Experience for not duplicating the props. One time for the propTypes and a second time for the render method when destructuring. This reduces the risk of mistakes.
+ 
+##### The cons:
+ - The prop types can't be stripped in production without unknown side effects. This means that the bundle will be slightly larger.
+
 ### Example
 
 ```js
