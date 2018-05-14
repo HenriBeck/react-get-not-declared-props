@@ -24,7 +24,7 @@ export default function getNotDeclaredProps(
 ) {
   return omit(props, [
     ...additionalProps,
-    ...Object.keys(instance.propTypes),
+    ...(instance.propTypes ? Object.keys(instance.propTypes) : []),
   ]);
 }
 
