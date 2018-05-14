@@ -1,5 +1,7 @@
 module.exports = {
-  extends: 'airbnb-base',
+  extends: [
+    'henribeck',
+    'henribeck/flow',
+  ],
 
-  parser: 'babel-eslint',
 };

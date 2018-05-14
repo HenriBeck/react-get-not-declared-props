@@ -1,15 +1,14 @@
 // @flow
 
+// eslint-disable-next-line filenames/match-exported
 type Component = { propTypes: {} };
 type Props = {};
 
-function omit(props: Props, keys: Array<string>) {
-  const set = new Set(keys);
-
+function omit(props: Props, keys: $ReadOnlyArray<string>) {
   return Object
     .keys(props)
     .reduce((acc, key) => {
-      if (set.has(key)) {
+      if (keys.includes(key)) {
         return acc;
       }
 
@@ -17,24 +16,28 @@ function omit(props: Props, keys: Array<string>) {
     }, {});
 }
 
-export default function getNotDeclaredProps(
+function getNotDeclaredProps(
   props: Props,
   instance: Component,
-  additionalProps?: Array<string> = [],
+  additionalProps?: $ReadOnlyArray<string> = [],
 ) {
+  const propNames = instance.propTypes ? Object.keys(instance.propTypes) : [];
+
   return omit(props, [
     ...additionalProps,
-    ...(instance.propTypes ? Object.keys(instance.propTypes) : []),
+    ...propNames,
   ]);
 }
 
-export function createGetNotDeclaredProps(propNames: Array<string>) {
+export function createGetNotDeclaredProps(propNames: $ReadOnlyArray<string>) {
   return (
     props: Props,
     instance: Component,
-    additionalProps?: Array<string> = [],
+    additionalProps?: $ReadOnlyArray<string> = [],
   ) => getNotDeclaredProps(props, instance, [
     ...propNames,
     ...additionalProps,
   ]);
 }
+
+export default getNotDeclaredProps;

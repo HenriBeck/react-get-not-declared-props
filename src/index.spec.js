@@ -2,7 +2,7 @@
 
 import test from 'ava';
 
-import getNotDeclaredProps, { createGetNotDeclaredProps } from './index';
+import getNotDeclaredProps, { createGetNotDeclaredProps } from '.';
 
 const Component = () => null;
 
