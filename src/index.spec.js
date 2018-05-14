@@ -18,6 +18,14 @@ test('remove all props which are defined inside propTypes', (t) => {
   );
 });
 
+test('should work when no propTypes are declared on the component', (t) => {
+  t.deepEqual(
+    // $FlowFixMe: Test for when the component doesn't have propTypes
+    getNotDeclaredProps({ prop1: true }, {}),
+    { prop1: true },
+  );
+});
+
 test('createGetNotDeclaredProps should return a function', (t) => {
   t.true(typeof createGetNotDeclaredProps([]) === 'function');
 });
