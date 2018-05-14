@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  build:
+  lint:
     working_directory: ~/react-get-not-declared-props
     docker:
       - image: circleci/node:8
@@ -13,6 +13,51 @@ jobs:
       - run:
           name: Lint Code
           command: yarn run lint
+  flow:
+    working_directory: ~/react-get-not-declared-props
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - run:
+          name: Install Packages
+          command: yarn install
+      - run:
+          name: Flow
+          command: yarn run flow
+
+  test:
+    working_directory: ~/react-get-not-declared-props
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - run:
+          name: Install Packages
+          command: yarn install
       - run:
           name: Run Tests & Check Coverage
           command: yarn run test:coverage
+
+  build:
+    working_directory: ~/react-get-not-declared-props
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - run:
+          name: Install Packages
+          command: yarn install
+      - run:
+          name: Build
+          command: yarn run build
+
+workflows:
+  version: 2
+
+  test:
+    jobs:
+      - lint
+      - flow
+      - test
+      - build
