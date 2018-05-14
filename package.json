@@ -50,7 +50,8 @@
   "nyc": {
     "check-coverage": true,
     "exclude": [
-      "src/index.spec.js"
+      "src/index.spec.js",
+      ".babelrc.js"
     ],
     "lines": 100,
     "statements": 100,
