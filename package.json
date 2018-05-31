@@ -10,10 +10,10 @@
     "lib/"
   ],
   "scripts": {
-    "test": "ava --no-cache",
+    "test": "ava",
     "test:coverage": "nyc yarn run test",
     "prebuild": "rimraf lib/",
-    "build": "babel src -d lib && flow-copy-source src lib -i *.spec.js",
+    "build": "babel src -d lib --ignore=\"*.spec.js\" && flow-copy-source src lib -i *.spec.js",
     "generate-report:html": "nyc report --reporter=html",
     "generate-report:lcov": "nyc report --reporter=text-lcov",
     "report-coverage": "yarn run generate-report:lcov | coveralls",
@@ -36,6 +36,7 @@
     "rimraf": "2.6.2"
   },
   "ava": {
+    "cache": false,
     "files": [
       "src/index.spec.js"
     ],

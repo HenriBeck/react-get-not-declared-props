@@ -3,8 +3,4 @@ module.exports = {
     '@babel/preset-env',
     '@babel/preset-flow',
   ],
-
-  ignore: [
-    'src/*.spec.js'
-  ],
 };
