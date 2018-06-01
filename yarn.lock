@@ -905,9 +905,9 @@ auto-bind@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/auto-bind/-/auto-bind-1.2.0.tgz#8b7e318aad53d43ba8a8ecaf0066d85d5f798cd6"
 
-ava@1.0.0-beta.5:
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/ava/-/ava-1.0.0-beta.5.tgz#57a9fcd28cf65979fc3f8f9bb21699b02f6ef045"
+ava@1.0.0-beta.5.1:
+  version "1.0.0-beta.5.1"
+  resolved "https://registry.yarnpkg.com/ava/-/ava-1.0.0-beta.5.1.tgz#34320902d44e6ba5109d4d8af3a6555eda4b7e8b"
   dependencies:
     "@ava/babel-preset-stage-4" "2.0.0-beta.7"
     "@ava/babel-preset-transform-test-files" "4.0.0-beta.6"
@@ -939,6 +939,7 @@ ava@1.0.0-beta.5:
     convert-source-map "^1.5.1"
     currently-unhandled "^0.4.1"
     debug "^3.1.0"
+    del "^3.0.0"
     dot-prop "^4.2.0"
     emittery "^0.3.0"
     empower-core "^0.6.1"
@@ -1706,6 +1707,17 @@ del@^2.0.2:
     object-assign "^4.0.1"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
+    rimraf "^2.2.8"
+
+del@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/del/-/del-3.0.0.tgz#53ecf699ffcbcb39637691ab13baf160819766e5"
+  dependencies:
+    globby "^6.1.0"
+    is-path-cwd "^1.0.0"
+    is-path-in-cwd "^1.0.0"
+    p-map "^1.1.1"
+    pify "^3.0.0"
     rimraf "^2.2.8"
 
 delayed-stream@~1.0.0:
@@ -2521,6 +2533,16 @@ globby@^5.0.0:
   dependencies:
     array-union "^1.0.1"
     arrify "^1.0.0"
+    glob "^7.0.3"
+    object-assign "^4.0.1"
+    pify "^2.0.0"
+    pinkie-promise "^2.0.0"
+
+globby@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/globby/-/globby-6.1.0.tgz#f5a6d70e8395e21c858fb0489d64df02424d506c"
+  dependencies:
+    array-union "^1.0.1"
     glob "^7.0.3"
     object-assign "^4.0.1"
     pify "^2.0.0"
@@ -3897,6 +3919,10 @@ p-locate@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-2.0.0.tgz#20a0103b222a70c8fd39cc2e580680f3dde5ec43"
   dependencies:
     p-limit "^1.1.0"
+
+p-map@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
 
 package-hash@^2.0.0:
   version "2.0.0"
