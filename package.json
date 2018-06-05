@@ -31,7 +31,7 @@
     "eslint": "4.19.1",
     "eslint-config-henribeck": "4.19.7",
     "flow-bin": "0.73.0",
-    "flow-copy-source": "1.3.0",
+    "flow-copy-source": "2.0.0",
     "nyc": "12.0.2",
     "rimraf": "2.6.2"
   },
