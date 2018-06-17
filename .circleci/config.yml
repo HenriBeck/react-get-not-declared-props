@@ -4,7 +4,7 @@ jobs:
   lint:
     working_directory: ~/react-get-not-declared-props
     docker:
-      - image: circleci/node:8@sha256:ee5f44c857a42e8643b7bbdb2b1b76ad715e702626bb6423ff6ab7144e518c84
+      - image: circleci/node:8@sha256:d77137abf22ea044e38b8c1a0a1fb52e5b1f0c417a44b2a4f754afbadcfb03f6
     steps:
       - checkout
       - run:
@@ -16,7 +16,7 @@ jobs:
   flow:
     working_directory: ~/react-get-not-declared-props
     docker:
-      - image: circleci/node:8@sha256:ee5f44c857a42e8643b7bbdb2b1b76ad715e702626bb6423ff6ab7144e518c84
+      - image: circleci/node:8@sha256:d77137abf22ea044e38b8c1a0a1fb52e5b1f0c417a44b2a4f754afbadcfb03f6
     steps:
       - checkout
       - run:
@@ -29,7 +29,7 @@ jobs:
   test:
     working_directory: ~/react-get-not-declared-props
     docker:
-      - image: circleci/node:8@sha256:ee5f44c857a42e8643b7bbdb2b1b76ad715e702626bb6423ff6ab7144e518c84
+      - image: circleci/node:8@sha256:d77137abf22ea044e38b8c1a0a1fb52e5b1f0c417a44b2a4f754afbadcfb03f6
     steps:
       - checkout
       - run:
@@ -42,7 +42,7 @@ jobs:
   build:
     working_directory: ~/react-get-not-declared-props
     docker:
-      - image: circleci/node:8@sha256:ee5f44c857a42e8643b7bbdb2b1b76ad715e702626bb6423ff6ab7144e518c84
+      - image: circleci/node:8@sha256:d77137abf22ea044e38b8c1a0a1fb52e5b1f0c417a44b2a4f754afbadcfb03f6
     steps:
       - checkout
       - run:
