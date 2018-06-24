@@ -12,7 +12,10 @@ function omit(props: Props, keys: $ReadOnlyArray<string>) {
         return acc;
       }
 
-      return Object.assign({}, acc, { [key]: props[key] });
+      return {
+        ...acc,
+        [key]: props[key],
+      };
     }, {});
 }
 
