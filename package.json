@@ -22,11 +22,11 @@
     "flow": "flow check ./src/"
   },
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.51",
-    "@babel/core": "7.0.0-beta.51",
-    "@babel/preset-env": "7.0.0-beta.51",
-    "@babel/preset-flow": "7.0.0-beta.51",
-    "@babel/register": "7.0.0-beta.51",
+    "@babel/cli": "7.0.0-beta.52",
+    "@babel/core": "7.0.0-beta.52",
+    "@babel/preset-env": "7.0.0-beta.52",
+    "@babel/preset-flow": "7.0.0-beta.52",
+    "@babel/register": "7.0.0-beta.52",
     "ava": "1.0.0-beta.6",
     "eslint": "5.0.1",
     "eslint-config-henribeck": "5.0.4",
