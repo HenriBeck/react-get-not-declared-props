@@ -33,9 +33,9 @@
     imurmurhash "^0.1.4"
     slide "^1.1.5"
 
-"@babel/cli@7.0.0-beta.53":
-  version "7.0.0-beta.53"
-  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.0.0-beta.53.tgz#f2caf09950224123845ec5077ed7ab0863d8d823"
+"@babel/cli@7.0.0-beta.52":
+  version "7.0.0-beta.52"
+  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.0.0-beta.52.tgz#e8a6e1c239c66c90daeed06d6ce02851536e7445"
   dependencies:
     commander "^2.8.1"
     convert-source-map "^1.1.0"
