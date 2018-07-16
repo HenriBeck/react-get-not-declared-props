@@ -2,7 +2,7 @@ src/
 .circleci/
 .coverage/
 .nyc_output/
-.babelrc.js
+babel.config.js
 .eslintrc.js
 .flowconfig
 .gitignore

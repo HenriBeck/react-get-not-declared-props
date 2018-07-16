@@ -1,14 +1,16 @@
 // @flow
 
 // eslint-disable-next-line filenames/match-exported
-type Component = { propTypes: {} };
-type Props = {};
+import { type ComponentType } from 'react';
 
-function omit(props: Props, keys: $ReadOnlyArray<string>) {
+function omit<
+  Props: {},
+  Keys: $ReadOnlyArray<string>
+>(props: Props, keys: Keys) {
   return Object
     .keys(props)
     .reduce((acc, key) => {
-      if (keys.includes(key)) {
+      if (keys.indexOf(key) >= 0) {
         return acc;
       }
 
@@ -19,9 +21,9 @@ function omit(props: Props, keys: $ReadOnlyArray<string>) {
     }, {});
 }
 
-function getNotDeclaredProps(
-  props: Props,
-  instance: Component,
+function getNotDeclaredProps<Props: {}, PassedProps: {}>(
+  props: PassedProps,
+  instance: ComponentType<Props>,
   additionalProps?: $ReadOnlyArray<string> = [],
 ) {
   const propNames = instance.propTypes ? Object.keys(instance.propTypes) : [];
@@ -33,9 +35,9 @@ function getNotDeclaredProps(
 }
 
 export function createGetNotDeclaredProps(propNames: $ReadOnlyArray<string>) {
-  return (
-    props: Props,
-    instance: Component,
+  return <Props: {}, PassedProps: {}>(
+    props: PassedProps,
+    instance: ComponentType<Props>,
     additionalProps?: $ReadOnlyArray<string> = [],
   ) => getNotDeclaredProps(props, instance, [
     ...propNames,
