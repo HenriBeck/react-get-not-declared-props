@@ -3,5 +3,4 @@ module.exports = {
     'henribeck',
     'henribeck/flow',
   ],
-
 };
