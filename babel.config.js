@@ -3,4 +3,6 @@ module.exports = {
     '@babel/preset-env',
     '@babel/preset-flow',
   ],
+
+  env: { test: { plugins: ['istanbul'] } },
 };

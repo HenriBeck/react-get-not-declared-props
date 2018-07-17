@@ -11,11 +11,14 @@
   ],
   "scripts": {
     "test": "ava",
-    "test:coverage": "nyc yarn run test",
+    "test:coverage": "cross-env NODE_ENV=test nyc yarn test",
+    "posttest:coverage": "yarn generate-report",
+    "prepare": "yarn build",
     "prebuild": "rimraf lib/",
-    "build": "babel src -d lib --ignore=\"*.test.js\" && flow-copy-source src lib -i *.test.js",
+    "build": "yarn build:lib && yarn build:flow",
+    "build:lib": "rimraf lib/ && babel src -d lib --ignore=\"*.test.js\"",
+    "build:flow": "flow-copy-source src lib -i *.test.js",
     "generate-report": "nyc report --reporter=html",
-    "prepublish": "yarn run build",
     "lint": "eslint src/",
     "flow": "flow check ./src/"
   },
@@ -30,6 +33,7 @@
     "@babel/register": "7.0.0-beta.53",
     "ava": "1.0.0-beta.6",
     "babel-plugin-istanbul": "4.1.6",
+    "cross-env": "5.2.0",
     "eslint": "5.1.0",
     "eslint-config-henribeck": "5.1.1",
     "flow-bin": "0.76.0",
@@ -39,6 +43,15 @@
     "rimraf": "2.6.2"
   },
   "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "sourceMap": false,
+    "instrument": false,
     "check-coverage": true,
     "report-dir": "./.coverage",
     "exclude": [
