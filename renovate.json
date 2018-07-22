@@ -4,5 +4,13 @@
   ],
   "assignees": ["HenriBeck"],
 
-  "digest": { "automerge": true }
+  "packageRules": [{
+    "depTypeList": ["devDependencies", "dependencies"],
+    "rangeStrategy": "pin"
+  }, {
+    "depTypeList": ["peerDependencies"],
+    "rangeStrategy": "replace"
+  }],
+
+  "pinDigests": false
 }
