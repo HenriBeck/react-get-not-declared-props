@@ -2273,9 +2273,9 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-henribeck@5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.2.1.tgz#c2eda3bbe71fec50daf2d004d8ba9ea4b36efa5c"
+eslint-config-henribeck@5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.2.2.tgz#d56a310827797527e48eeb51146ce44de312995e"
   dependencies:
     babel-eslint "8.2.6"
     eslint-import-resolver-node "0.3.2"
@@ -2289,7 +2289,7 @@ eslint-config-henribeck@5.2.1:
     eslint-plugin-markdown "1.0.0-beta.8"
     eslint-plugin-promise "3.8.0"
     eslint-plugin-react "7.10.0"
-    eslint-plugin-unicorn "4.0.3"
+    eslint-plugin-unicorn "5.0.0"
 
 eslint-import-resolver-node@0.3.2, eslint-import-resolver-node@^0.3.1:
   version "0.3.2"
@@ -2393,9 +2393,9 @@ eslint-plugin-react@7.10.0:
     jsx-ast-utils "^2.0.1"
     prop-types "^15.6.2"
 
-eslint-plugin-unicorn@4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-4.0.3.tgz#7e9998711bf237809ed1881a51a77000b2f40586"
+eslint-plugin-unicorn@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-5.0.0.tgz#3cd37e9202892c4f819c3ce76dcbcae415c84b1d"
   dependencies:
     clean-regexp "^1.0.0"
     eslint-ast-utils "^1.0.0"
