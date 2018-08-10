@@ -26,11 +26,11 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.55",
-    "@babel/core": "7.0.0-beta.55",
-    "@babel/preset-env": "7.0.0-beta.55",
-    "@babel/preset-flow": "7.0.0-beta.55",
-    "@babel/register": "7.0.0-beta.55",
+    "@babel/cli": "7.0.0-rc.1",
+    "@babel/core": "7.0.0-rc.1",
+    "@babel/preset-env": "7.0.0-rc.1",
+    "@babel/preset-flow": "7.0.0-rc.1",
+    "@babel/register": "7.0.0-rc.1",
     "ava": "1.0.0-beta.6",
     "babel-plugin-istanbul": "4.1.6",
     "cross-env": "5.2.0",
