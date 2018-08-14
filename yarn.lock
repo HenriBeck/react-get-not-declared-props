@@ -2064,22 +2064,22 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-henribeck@5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.3.0.tgz#12c2c1d92cc1c663563bfd3b3b8d5202f61a35b1"
+eslint-config-henribeck@5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.3.1.tgz#101e91eaaeb13cd7e7ba686d7b1c8bb500c4ee9a"
   dependencies:
     babel-eslint "8.2.6"
     eslint-import-resolver-node "0.3.2"
-    eslint-plugin-ava "5.0.0"
+    eslint-plugin-ava "5.1.0"
     eslint-plugin-eslint-comments "3.0.1"
     eslint-plugin-filenames "1.3.2"
     eslint-plugin-flowtype "2.50.0"
     eslint-plugin-fp "2.3.0"
-    eslint-plugin-import "2.13.0"
+    eslint-plugin-import "2.14.0"
     eslint-plugin-json "1.2.1"
     eslint-plugin-markdown "1.0.0-beta.8"
     eslint-plugin-promise "3.8.0"
-    eslint-plugin-react "7.10.0"
+    eslint-plugin-react "7.11.0"
     eslint-plugin-unicorn "5.0.0"
 
 eslint-import-resolver-node@0.3.2, eslint-import-resolver-node@^0.3.1:
@@ -2096,9 +2096,9 @@ eslint-module-utils@^2.2.0:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-ava@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ava/-/eslint-plugin-ava-5.0.0.tgz#fd6369f853047c863f863324d8ab4e38fc47cde0"
+eslint-plugin-ava@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ava/-/eslint-plugin-ava-5.1.0.tgz#885e6bcd1124c08bb8f3ef721600174e25af40a3"
   dependencies:
     arrify "^1.0.1"
     deep-strict-equal "^0.2.0"
@@ -2142,9 +2142,9 @@ eslint-plugin-fp@2.3.0:
     lodash "^4.13.1"
     req-all "^0.1.0"
 
-eslint-plugin-import@2.13.0:
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.13.0.tgz#df24f241175e312d91662dc91ca84064caec14ed"
+eslint-plugin-import@2.14.0:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.14.0.tgz#6b17626d2e3e6ad52cfce8807a845d15e22111a8"
   dependencies:
     contains-path "^0.1.0"
     debug "^2.6.8"
@@ -2175,10 +2175,11 @@ eslint-plugin-promise@3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.8.0.tgz#65ebf27a845e3c1e9d6f6a5622ddd3801694b621"
 
-eslint-plugin-react@7.10.0:
-  version "7.10.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.10.0.tgz#af5c1fef31c4704db02098f9be18202993828b50"
+eslint-plugin-react@7.11.0:
+  version "7.11.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.11.0.tgz#b3124af974c4da978e62a57ea49a7bc26f11e76d"
   dependencies:
+    array-includes "^3.0.3"
     doctrine "^2.1.0"
     has "^1.0.3"
     jsx-ast-utils "^2.0.1"
