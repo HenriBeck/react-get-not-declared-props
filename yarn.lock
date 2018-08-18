@@ -2064,9 +2064,9 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-henribeck@5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.3.1.tgz#101e91eaaeb13cd7e7ba686d7b1c8bb500c4ee9a"
+eslint-config-henribeck@5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.4.1.tgz#45724b91d424f648abc1b26e819eb781fede674e"
   dependencies:
     babel-eslint "8.2.6"
     eslint-import-resolver-node "0.3.2"
@@ -2078,8 +2078,8 @@ eslint-config-henribeck@5.3.1:
     eslint-plugin-import "2.14.0"
     eslint-plugin-json "1.2.1"
     eslint-plugin-markdown "1.0.0-beta.8"
-    eslint-plugin-promise "3.8.0"
-    eslint-plugin-react "7.11.0"
+    eslint-plugin-promise "4.0.0"
+    eslint-plugin-react "7.11.1"
     eslint-plugin-unicorn "5.0.0"
 
 eslint-import-resolver-node@0.3.2, eslint-import-resolver-node@^0.3.1:
@@ -2171,13 +2171,13 @@ eslint-plugin-markdown@1.0.0-beta.8:
     remark-parse "^3.0.0"
     unified "^6.1.2"
 
-eslint-plugin-promise@3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.8.0.tgz#65ebf27a845e3c1e9d6f6a5622ddd3801694b621"
+eslint-plugin-promise@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.0.0.tgz#bc15a4aa04fa6116113b6c47488c421821b758fc"
 
-eslint-plugin-react@7.11.0:
-  version "7.11.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.11.0.tgz#b3124af974c4da978e62a57ea49a7bc26f11e76d"
+eslint-plugin-react@7.11.1:
+  version "7.11.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.11.1.tgz#c01a7af6f17519457d6116aa94fc6d2ccad5443c"
   dependencies:
     array-includes "^3.0.3"
     doctrine "^2.1.0"
