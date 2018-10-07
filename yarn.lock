@@ -1961,9 +1961,9 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-henribeck@5.6.2:
-  version "5.6.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.6.2.tgz#ffc9331da7438ef68f755bf8b7f132b3e8f44fad"
+eslint-config-henribeck@5.6.3:
+  version "5.6.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.6.3.tgz#3dd546a6f7974e1ea6a28c3fcdfd5220a61dd96f"
   dependencies:
     babel-eslint "10.0.1"
     eslint-import-resolver-node "0.3.2"
