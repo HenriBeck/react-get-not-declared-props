@@ -1883,22 +1883,23 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-henribeck@5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.7.0.tgz#e807f60a5545c9cd36f9e62744b24343ebe1a160"
+eslint-config-henribeck@5.8.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-5.8.0.tgz#0331fdf21b46094189f426e057632f66b3732617"
   dependencies:
     babel-eslint "10.0.1"
     eslint-import-resolver-node "0.3.2"
     eslint-plugin-ava "5.1.1"
     eslint-plugin-eslint-comments "3.0.1"
     eslint-plugin-filenames "1.3.2"
-    eslint-plugin-flowtype "3.0.0"
+    eslint-plugin-flowtype "3.1.1"
     eslint-plugin-fp "2.3.0"
     eslint-plugin-import "2.14.0"
     eslint-plugin-json "1.2.1"
     eslint-plugin-markdown "1.0.0-beta.8"
     eslint-plugin-promise "4.0.1"
     eslint-plugin-react "7.11.1"
+    eslint-plugin-react-hooks "0.0.0"
     eslint-plugin-unicorn "6.0.1"
 
 eslint-import-resolver-node@0.3.2, eslint-import-resolver-node@^0.3.1:
@@ -1946,9 +1947,9 @@ eslint-plugin-filenames@1.3.2:
     lodash.snakecase "4.1.1"
     lodash.upperfirst "4.3.1"
 
-eslint-plugin-flowtype@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-3.0.0.tgz#4b72588d8a5a5c836439752fe52e8e0f4b9954df"
+eslint-plugin-flowtype@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-3.1.1.tgz#1b96559b8015c06e6b7a3c5ba9c73d8e652e69d8"
   dependencies:
     lodash "^4.17.10"
 
@@ -1993,6 +1994,10 @@ eslint-plugin-markdown@1.0.0-beta.8:
 eslint-plugin-promise@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.0.1.tgz#2d074b653f35a23d1ba89d8e976a985117d1c6a2"
+
+eslint-plugin-react-hooks@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-0.0.0.tgz#9988f14082a159931c3dfa9ba699130457da927a"
 
 eslint-plugin-react@7.11.1:
   version "7.11.1"
