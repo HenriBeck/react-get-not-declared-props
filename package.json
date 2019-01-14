@@ -40,7 +40,7 @@
     "flow-copy-source": "2.0.2",
     "nyc": "13.1.0",
     "react": "16.7.0",
-    "rimraf": "2.6.2"
+    "rimraf": "2.6.3"
   },
   "nyc": {
     "require": [
