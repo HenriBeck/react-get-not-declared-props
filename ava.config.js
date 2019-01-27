@@ -1,18 +1,6 @@
 export default {
   cache: false,
-  require: [
-    '@babel/register',
-  ],
   files: [
-    'src/*.test.js',
+    'src/*.test.ts',
   ],
-
-  babel: {
-    testOptions: {
-      presets: [
-        '@babel/preset-env',
-        '@babel/preset-flow',
-      ],
-    },
-  },
 };

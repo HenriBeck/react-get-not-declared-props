@@ -1,0 +1,21 @@
+{
+  "dist/react-get-not-declared-props.cjs.js": {
+    "bundled": 2028,
+    "minified": 701,
+    "gzipped": 403
+  },
+  "dist/react-get-not-declared-props.esm.js": {
+    "bundled": 1946,
+    "minified": 632,
+    "gzipped": 361,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 1775
+      }
+    }
+  }
+}
