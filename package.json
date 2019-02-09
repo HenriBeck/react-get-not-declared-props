@@ -35,7 +35,7 @@
     "babel-plugin-istanbul": "5.1.0",
     "cross-env": "5.2.0",
     "eslint": "5.12.1",
-    "eslint-config-henribeck": "5.12.0",
+    "eslint-config-henribeck": "5.13.3",
     "flow-bin": "0.88.0",
     "flow-copy-source": "2.0.2",
     "nyc": "13.1.0",
