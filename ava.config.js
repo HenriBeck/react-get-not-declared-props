@@ -1,18 +1,10 @@
 export default {
-  cache: false,
-  require: [
-    '@babel/register',
-  ],
-  files: [
-    'src/*.test.js',
-  ],
-
-  babel: {
-    testOptions: {
-      presets: [
-        '@babel/preset-env',
-        '@babel/preset-flow',
-      ],
-    },
-  },
+  cache: true,
+  files: ['src/*.test.ts'],
+  compileEnhancements: false,
+  failWithoutAssertions: true,
+  failFast: true,
+  concurrency: 5,
+  extensions: ['ts'],
+  require: ['ts-node/register/transpile-only'],
 };

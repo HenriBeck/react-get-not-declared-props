@@ -1,5 +1,6 @@
-lib/
+dist/
 node_modules/
 .nyc_output/
 .coverage/
 yarn-error.log
+.idea
