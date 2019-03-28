@@ -2,61 +2,45 @@
   "name": "react-get-not-declared-props",
   "version": "1.1.0",
   "description": "Utility function to get all additional props that were passed to a component",
-  "main": "lib/index.js",
-  "repository": "https://github.com/HenriBeck/react-get-not-declared-props.git",
-  "author": "Henri Beck <henribeck.dev@gmail.com>",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenriBeck/react-get-not-declared-props"
+  },
+  "author": {
+    "email": "henribeck.dev@gmail.com",
+    "name": "Henri Beck"
+  },
   "license": "MIT",
   "files": [
-    "lib/"
+    "dist/"
   ],
   "scripts": {
-    "test": "ava",
-    "test:coverage": "cross-env NODE_ENV=test nyc yarn test",
+    "test": "TS_NODE_PROJECT=\"./tsconfig.test.json\" ava",
+    "test:coverage": "nyc yarn test",
     "posttest:coverage": "yarn generate-report",
-    "prepare": "yarn build",
-    "prebuild": "rimraf lib/",
-    "build": "yarn build:lib && yarn build:flow",
-    "build:lib": "rimraf lib/ && babel src -d lib --ignore=\"*.test.js\"",
-    "build:flow": "flow-copy-source src lib -i *.test.js",
-    "generate-report": "nyc report --reporter=html",
-    "lint": "eslint src/",
-    "flow": "flow check ./src/"
+    "prebuild": "rimraf dist/",
+    "build": "tsc",
+    "format": "prettier --write \"src/*.ts\" \"*.{md,js}\" \".circleci/config.yml\"",
+    "tsc": "tsc --noEmit",
+    "generate-report": "nyc report --reporter=html"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16"
   },
   "devDependencies": {
-    "@babel/cli": "7.2.3",
-    "@babel/core": "7.2.2",
-    "@babel/preset-env": "7.3.1",
-    "@babel/preset-flow": "7.0.0",
-    "@babel/register": "7.0.0",
-    "ava": "1.2.0",
-    "babel-plugin-istanbul": "5.1.0",
-    "cross-env": "5.2.0",
-    "eslint": "5.12.1",
-    "eslint-config-henribeck": "5.12.0",
-    "flow-bin": "0.88.0",
-    "flow-copy-source": "2.0.2",
-    "nyc": "13.1.0",
-    "react": "16.7.0",
-    "rimraf": "2.6.3"
-  },
-  "nyc": {
-    "require": [
-      "@babel/register"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "sourceMap": false,
-    "instrument": false,
-    "check-coverage": true,
-    "report-dir": "./.coverage",
-    "exclude": [
-      "*.config.js",
-      "*.test.js"
-    ]
+    "@types/prop-types": "^15.7.0",
+    "@types/react": "^16.7.21",
+    "ava": "^1.2.0",
+    "cross-env": "^5.2.0",
+    "nyc": "^13.1.0",
+    "prettier": "^1.16.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.4000"
   }
 }
