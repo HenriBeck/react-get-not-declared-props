@@ -1,13 +1,18 @@
-import {ComponentType} from 'react';
+import { ComponentType } from 'react';
 
 const cache = new WeakMap();
 
-function getPropNames(component: ComponentType<object>) {
+function getPropNames<Props>(
+  component: ComponentType<Props>,
+): Map<keyof Props, true> {
   if (!cache.has(component)) {
-    const propNames = component.propTypes ? Object.keys(component.propTypes) : [];
+    const propNames = component.propTypes
+      ? Object.keys(component.propTypes)
+      : [];
 
-    cache.set(component, new Map<string, true>(
-      propNames.map((propName): [string, true] => [propName, true]))
+    cache.set(
+      component,
+      new Map(propNames.map((propName): [string, true] => [propName, true])),
     );
   }
 

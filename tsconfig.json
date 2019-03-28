@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["es2017"],
+    "lib": ["es2015"],
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "alwaysStrict": true,
@@ -17,7 +17,18 @@
     "pretty": true,
     "strict": true,
     "target": "es5",
+    "module": "es2015",
     "moduleResolution": "node",
-    "resolveJsonModule": true
-  }
+    "resolveJsonModule": true,
+    "declarationDir": "./dist",
+    "keyofStringsOnly": true,
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/*.ts"
+  ],
+  "exclude": [
+    "**/*.test.ts"
+  ]
 }

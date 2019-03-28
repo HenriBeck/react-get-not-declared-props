@@ -1,12 +1,14 @@
-import {ComponentType} from 'react';
+import { ComponentType } from 'react';
 import getPropNames from './get-prop-names';
 
-type Props = Record<string, any>;
+function omit<Props extends Record<string, any>, ReceivedProps extends Props>(
+  props: ReceivedProps,
+  keys: Map<keyof Props, true>,
+): Omit<ReceivedProps, keyof Props> {
+  const propNames = Object.keys(props) as Array<keyof Props>;
 
-function omit(props: Props, keys: Map<string, true>) {
-  return Object
-    .keys(props)
-    .reduce((acc, key) => {
+  return propNames.reduce(
+    (acc, key) => {
       if (keys.has(key)) {
         return acc;
       }
@@ -15,10 +17,20 @@ function omit(props: Props, keys: Map<string, true>) {
         ...acc,
         [key]: props[key],
       };
-    }, {});
+    },
+    {} as Omit<ReceivedProps, keyof Props>,
+  );
 }
 
-function getNotDeclaredProps(props: Props, instance: ComponentType<object>) {
+type Omit<Obj1, Names> = Pick<Obj1, Exclude<keyof Obj1, Names>>;
+
+function getNotDeclaredProps<
+  Props extends Record<string, any>,
+  ReceivedProps extends Props
+>(
+  props: ReceivedProps,
+  instance: ComponentType<Props>,
+): Omit<ReceivedProps, keyof Props> {
   const propNames = getPropNames(instance);
 
   return omit(props, propNames);

@@ -2,8 +2,9 @@
   "name": "react-get-not-declared-props",
   "version": "1.1.0",
   "description": "Utility function to get all additional props that were passed to a component",
-  "main": "dist/react-get-not-declared-props.cjs.js",
-  "module": "dist/react-get-not-declared-props.esm.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/HenriBeck/react-get-not-declared-props"
@@ -18,31 +19,25 @@
   ],
   "scripts": {
     "test": "ava",
-    "test:coverage": "cross-env NODE_ENV=test nyc yarn test",
+    "test:coverage": "nyc yarn test",
     "posttest:coverage": "yarn generate-report",
     "prebuild": "rimraf dist/",
-    "build": "rollup -c",
-    "generate-report": "nyc report --reporter=html",
-    "lint": "eslint src/"
+    "build": "tsc",
+    "format": "prettier --write \"src/*.ts\" \"*.{md,js}\" \".circleci/config.yml\"",
+    "tsc": "tsc --noEmit",
+    "generate-report": "nyc report --reporter=html"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16"
   },
   "devDependencies": {
     "@types/react": "^16.7.21",
-    "ava": "1.2.0",
-    "cross-env": "5.2.0",
-    "eslint": "5.12.1",
-    "eslint-config-henribeck": "5.12.0",
-    "nyc": "13.1.0",
-    "react": "16.7.0",
-    "rimraf": "2.6.3",
-    "rollup": "^1.1.2",
-    "rollup-plugin-size-snapshot": "^0.8.0",
-    "rollup-plugin-typescript": "^1.0.0",
-    "tslib": "^1.9.3",
-    "tslint": "^5.12.1",
-    "tslint-config-henribeck": "^0.1.0",
-    "typescript": "^3.2.4"
+    "ava": "^1.2.0",
+    "cross-env": "^5.2.0",
+    "nyc": "^13.1.0",
+    "prettier": "^1.16.4",
+    "react": "^16.8.6",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.3.4000"
   }
 }
